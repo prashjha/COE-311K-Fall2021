@@ -12,6 +12,9 @@ jobs:
       - image: klakegg/hugo:0.87.0-ext-ubuntu
     steps:
       - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
           name: "Run Hugo"
           command: |
             apt-get update
