@@ -26,6 +26,9 @@ jobs:
             git pull 
             # build website
             cd ..
+            # clean old files
+            rm -rf docs/*
+            # build
             HUGO_ENV="production"  hugo -F
             # commit to website repo
             git config user.email "pjha.sci@gmail.com"
@@ -33,4 +36,4 @@ jobs:
             git add .
             git commit --allow-empty -m "update" 
             # Push quietly to prevent showing the token in log
-            git push -q https://${G_TOKEN}@github.com/prashjha/COE-311K-website.git main
+            git push -q https://${G_TOKEN}@github.com/prashjha/COE-311K-Fall2021-website.git main
