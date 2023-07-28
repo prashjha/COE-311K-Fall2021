@@ -36,7 +36,7 @@ Office hours: TBA
 
 3. For group communication and online discussion, we will mainly use Canvas, however, I have also created groups in Groupme and Slack. 
 
-4. Lecture slides and assignments will be updated in both canvas and this github repository (however, updates in this repository is expected to be delayed): [COE 311K](https://github.com/prashjha/COE-311K)
+4. Lecture slides and assignments will be updated in both canvas and this github repository (however, updates in this repository is expected to be delayed): [COE 311K Fall 2021](https://github.com/prashjha/COE-311K-Fall2021)
 
 # Calendar
 

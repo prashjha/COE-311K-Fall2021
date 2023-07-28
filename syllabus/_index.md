@@ -15,7 +15,7 @@ title: "Syllabus"
 | Lecture room | ASE 1.126, map: 2617 Wichita St, Austin, TX 78712 |
 | Lecture time | MWF 9:00 am - 10:00 am |
 | Canvas webpage | [Section 1 (14610)](https://utexas.instructure.com/courses/1316151) |
-| Github repository | [COE-311K](https://github.com/prashjha/COE-311K.git) |
+| Github repository | [COE-311K-Fall2021](https://github.com/prashjha/COE-311K-Fall2021.git) |
 
 ## Syllabus pdf
 Download from this [link](Syllabus-COE-311K-Fall-2021.pdf)
