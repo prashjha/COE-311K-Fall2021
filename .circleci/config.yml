@@ -13,7 +13,10 @@ jobs:
     steps:
       - run:
           name: Avoid hosts unknown for github
-          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          command: |
+            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - run:
           name: "Run Hugo"
           command: |
