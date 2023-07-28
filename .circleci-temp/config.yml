@@ -1,0 +1,36 @@
+# ----------------------------------
+# Copyright (c) 2021 Prashant K. Jha
+# ----------------------------------
+#
+# Distributed under the Boost Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: klakegg/hugo:0.87.0-ext-ubuntu
+    steps:
+      - run:
+          name: "Run Hugo"
+          command: |
+            apt-get update
+            apt-get install -y git
+            # pull website repo
+            git clone https://github.com/prashjha/COE-311K-Fall2021-website.git
+            cd COE-311K-Fall2021-website
+            # update course repo
+            git submodule update --init COE-311K-Fall2021
+            cd COE-311K-Fall2021
+            git checkout main
+            git pull 
+            # build website
+            cd ..
+            HUGO_ENV="production"  hugo -F
+            # commit to website repo
+            git config user.email "pjha.sci@gmail.com"
+            git config user.name "Prashant K. Jha"
+            git add .
+            git commit --allow-empty -m "update" 
+            # Push quietly to prevent showing the token in log
+            git push -q https://${G_TOKEN}@github.com/prashjha/COE-311K-website.git main

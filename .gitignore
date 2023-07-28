@@ -1,0 +1,9 @@
+# IDEs
+.idea/
+
+# from mac
+._*
+*/._*
+
+.DS_Store
+*/.DS_Store/*
