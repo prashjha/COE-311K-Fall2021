@@ -25,7 +25,7 @@ jobs:
             apt-get update
             apt-get install -y git
             # pull website repo
-            git clone git@github.com:prashjha/COE-311K-Fall2021-website.git yes
+            git clone git@github.com:prashjha/COE-311K-Fall2021-website.git
             cd COE-311K-Fall2021-website
             # update course repo
             git submodule update --init COE-311K-Fall2021
