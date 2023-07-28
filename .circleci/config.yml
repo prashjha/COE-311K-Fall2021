@@ -28,8 +28,8 @@ jobs:
             git clone git@github.com:prashjha/COE-311K-Fall2021-website.git
             cd COE-311K-Fall2021-website
             # update course repo
-            git submodule update --init COE-311K-Fall2021
-            cd COE-311K-Fall2021
+            git submodule update --init COE-311K
+            cd COE-311K
             git checkout main
             git pull 
             # build website
